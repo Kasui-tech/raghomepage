@@ -4749,3 +4749,68 @@ input, select, textarea {
 .animate-zoom-in {
     transform: scale(0.9);
 }
+/* Case Studies (#cases) Enhancements */
+
+/* 1. 左对齐 【課題】、【解決策】、【導入効果】及其内容 */
+#cases .spotlight .content {
+    text-align: left; /* 确保整个 .content 区块默认为左对齐 */
+}
+
+#cases .spotlight .content h3 {
+    text-align: left; /* 案例标题也左对齐 */
+    /* 如果标题过长，可以考虑调整字体大小或允许换行 */
+    /* font-size: 1.3em; /* 可以根据需要调整 */
+    /* white-space: normal; /* 确保长标题可以正常换行 */
+}
+
+#cases .spotlight .content p {
+    text-align: left; /* 段落内容左对齐 */
+    line-height: 1.7; /* 稍微增加行高以便阅读 */
+}
+
+#cases .spotlight .content p strong {
+    display: block; /* 使【課題】等标签单独成行，或调整为inline-block并配合margin */
+    margin-top: 0.75em; /* 在每个小标题前增加一些间距 */
+    margin-bottom: 0.25em; /* 小标题和其内容之间的间距 */
+    color: #fff; /* 确保小标题颜色醒目 */
+}
+#cases .spotlight .content p strong:first-child {
+    margin-top: 0; /* 第一个小标题不需要顶部额外间距 */
+}
+
+/* 2. 私塾案例的标题显示在一行 (针对第二个 spotlight) */
+/* 这部分主要通过确保标题本身不要太长，或者在必要时允许其优雅换行。
+      如果标题非常长，强制不换行可能会导致溢出或布局问题。
+      CSS 可以帮助控制，但内容本身的简洁性也很重要。 */
+
+/* 针对所有案例标题的通用调整，确保它们不会因过长而破坏布局 */
+#cases .spotlight .content h3 {
+    /* 如果希望尽可能不换行，可以尝试（但不推荐用于过长标题）: */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* 更好的方式是允许其自然换行，或者在特定断点下调整字体大小 */
+    line-height: 1.3; /* 调整标题行高 */
+}
+
+
+/* 响应式调整：在中等屏幕及以下，spotlight 内容会居中，我们需要覆盖它 */
+@media screen and (max-width: 980px) {
+    #cases .spotlight .content {
+        text-align: left !important; /* 强制左对齐 */
+        padding: 1.5em; /* 调整内边距 */
+    }
+    #cases .spotlight .content h3,
+    #cases .spotlight .content p {
+        text-align: left !important; /* 强制子元素也左对齐 */
+    }
+    #cases .spotlight .image {
+        width: 100%; /* 确保图片宽度适应 */
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #cases .spotlight .content {
+        padding: 1em;
+    }
