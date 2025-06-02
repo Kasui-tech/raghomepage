@@ -1,0 +1,19 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded", // 或者 "compressed" 用于生产环境
+            "extensionName": ".css",
+            "savePath": "/assets/css" // 注意这个路径
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        // 如果您有不想被单独编译的Sass局部文件（通常以下划线开头），可以在这里排除
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": false, // true 或 false，根据您是否需要 source map
+    "liveSassCompile.settings.autoprefix": [ // 可以添加浏览器前缀
+        "> 1%",
+        "last 2 versions"
+    ]
+}

@@ -5,7 +5,6 @@
 */
 /* Banner */
 body.is-preload #banner h2 {
-  -webkit-transform: none;
   transform: none;
   opacity: 1;
 }
@@ -13,10 +12,9 @@ body.is-preload #banner h2:before, body.is-preload #banner h2:after {
   width: 100%;
 }
 body.is-preload #banner .more {
-  -webkit-transform: none;
   transform: none;
   opacity: 1;
 }
 body.is-preload #banner:after {
   opacity: 0;
-}
+}/*# sourceMappingURL=noscript.css.map */
